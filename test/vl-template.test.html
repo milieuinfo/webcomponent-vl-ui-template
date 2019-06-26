@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="../../@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+
+  <script type="module" src="../vl-template.src.js"></script>
+</head>
+
+<body>
+  <test-fixture id="vl-template-fixture">
+    <template>
+      <vl-template>
+        <span slot="header">header-content</span>
+        <span slot="main">main-content</span>
+        <span slot="footer">footer-content</span>
+      </vl-template>
+    </template>
+  </test-fixture>
+
+<script>
+  suite('vl-template', () => {
+    test('heeft de correcte slot contents', () => {
+      const element = fixture('vl-template-fixture');
+      const headerElement = element.shadowRoot.querySelector('vl-header > slot[name="header"]').assignedElements()[0];
+      const mainElement = element.shadowRoot.querySelector('div.vl-page > main.vl-main-content > slot[name="main"]').assignedElements()[0];
+      const footerElement = element.shadowRoot.querySelector('vl-footer > slot[name="footer"]').assignedElements()[0];
+
+      assert.isTrue(headerElement.innerText === 'header-content');
+      assert.isTrue(mainElement.innerText === 'main-content');
+      assert.isTrue(footerElement.innerText === 'footer-content');
+    });
+  });
+
+</script>
+</body>
+
+</html>
