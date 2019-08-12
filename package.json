@@ -31,7 +31,7 @@
     "demo": "http-server -a local.milieuinfo.be"
   },
   "dependencies": {
-    "vl-ui-core": "1.4.3"
+    "vl-ui-core": "1.4.4"
   },
   "peerDependencies": {
     "vl-ui-core": "^1.4.2"
