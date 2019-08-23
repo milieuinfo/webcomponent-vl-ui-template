@@ -16,7 +16,8 @@ import {VlElement, define} from '/node_modules/vl-ui-core/vl-core.js';
  * @property {slot} main - main content
  * @property {slot} footer - footer content binnen vl-footer
  * 
- * @version <a href="http://www.github.com/milieuinfo/webcomponent-vl-ui-template/releases/latest">Release notes</a>
+ * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-template/releases/latest|Release notes}
+ * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-template/issues|Issues}
  */
 export class VlTemplate extends VlElement(HTMLElement) {
   constructor() {
