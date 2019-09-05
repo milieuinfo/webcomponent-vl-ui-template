@@ -1,6 +1,6 @@
 {
   "name": "vl-ui-template",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "De standaard template voor websites en applicaties van de Vlaamse overheid",
   "main": "vl-template.js",
   "author": "DIDM",
