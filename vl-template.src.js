@@ -8,7 +8,7 @@ import {VlElement, define} from '/node_modules/vl-ui-core/vl-core.js';
 /**
  * VlTemplate
  * @class
- * @classdesc De standaard template voor websites en applicaties van de Vlaamse overheid. <a href="demo/vl-template.html">Demo</a>.
+ * @classdesc De standaard template voor websites en applicaties van de Vlaamse overheid.
  *
  * @extends VlElement
  *
@@ -18,6 +18,7 @@ import {VlElement, define} from '/node_modules/vl-ui-core/vl-core.js';
  * 
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-template/releases/latest|Release notes}
  * @see {@link https://www.github.com/milieuinfo/webcomponent-vl-ui-template/issues|Issues}
+ * @see {@link https://webcomponenten.omgeving.vlaanderen.be/demo/vl-ui-template.html|Demo}
  */
 export class VlTemplate extends VlElement(HTMLElement) {
   constructor() {
