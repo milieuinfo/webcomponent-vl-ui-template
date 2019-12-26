@@ -28,21 +28,29 @@
     "release:prepare:css": "replace '\\.\\./style.css' '/node_modules/vl-ui-template/style.css' vl-template.js",
     "release:prepare:commit": "git add -f vl-template.js && git commit --amend --no-edit && git pull",
     "release:testless": "np --yolo",
-    "demo": "http-server -a local.milieuinfo.be"
+    "demo": "http-server"
   },
   "dependencies": {
-    "vl-ui-core": "2.1.0"
+    "vl-ui-core": "^2.1.0",
+    "vl-ui-content-header": "^1.0.0",
+    "vl-ui-image": "^1.0.0",
+    "vl-ui-titles": "^1.0.13",
+    "vl-ui-typography": "^1.0.1"
   },
   "peerDependencies": {
-    "vl-ui-core": "^2.0.0"
+    "vl-ui-core": "^2.0.0",
+    "vl-ui-content-header": "^1.0.0",
+    "vl-ui-image": "^1.0.0",
+    "vl-ui-titles": "^1.0.13",
+    "vl-ui-typography": "^1.0.1"
   },
   "devDependencies": {
     "http-server": "0.11.1",
     "np": "3.1.0",
     "replace": "1.1.1",
     "uglify-js-es6": "2.8.9",
-    "vl-ui-util": "^2.0.0",
     "vl-ui-grid": "1.0.12",
+    "vl-ui-util": "^2.0.13",
     "wct-browser-legacy": "1.0.2",
     "web-component-tester": "6.9.2"
   }

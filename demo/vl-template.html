@@ -1,52 +1,93 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>vl-template voorbeeld</title>
   <meta name="viewport" content="width=device-width">
   <script type="module" src="../vl-template.src.js"></script>
   <script type="module" src="../node_modules/vl-ui-grid/vl-grid.js"></script>
+  <script type="module" src="../node_modules/vl-ui-content-header/vl-content-header.js"></script>
+  <script type="module" src="../node_modules/vl-ui-image/vl-image.js"></script>
+  <script type="module" src="../node_modules/vl-ui-titles/vl-titles.js"></script>
+  <script type="module" src="../node_modules/vl-ui-typography/vl-typography.js"></script>
   <script type="module" src="demo.js"></script>
-  <link rel="stylesheet" href="custom.css"/>
+  <link rel="stylesheet" href="custom.css" />
 </head>
 
 <body>
-<h1>vl-template demo</h1>
-<div>
-  <h2>Template</h2>
-  <pre>
+  <h1>vl-template demo</h1>
+  <div>
+    <h2>Template</h2>
+    <pre>
       <code class="line-numbers language-markup">
-
+        TODO
       </code>
     </pre>
-  <vl-template>
-    <div slot="header"><p>header content</p></div>
-    <div slot="main">
+    <vl-template>
+      <vl-content-header>
+        <img is="vl-image" slot="image" src="img/default.jpg"
+          srcset="img/mobile.jpg 320w, img/default.jpg 1024w, img/wide.jpg 1600w">
+        <a slot="context-link" href="https://www.vlaanderen.be">Context</a>
+        <a slot="title-link" href="https://www.vlaanderen.be">Vlaanderen</a>
+      </vl-content-header>
+
+      <section is="vl-region" no-space-bottom>
+        <div is="vl-layout">
+          <h1 is="vl-h1">Demo pagina</h1>
+        </div>
+      </section>
       <section is="vl-region">
         <div is="vl-layout">
-          <div is="vl-grid">
-            <div is="vl-column" size="3" max-size="4">
-              <div class="presentation__grid__col">
-                <p>3/4 breedte</p>
-              </div>
-            </div>
-            <div is="vl-column" size="1" max-size="4">
-              <div class="presentation__grid__col">
-                <p>1/4 breedte</p>
-              </div>
-            </div>
-          </div>
+          <h2 is="vl-h2">Dit is een voorbeeld van content</h2>
+          <vl-typography>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec nunc feugiat, pharetra urna sit amet,
+              suscipit dolor. Sed aliquam orci et pulvinar facilisis. Aliquam convallis malesuada blandit. Aliquam
+              placerat bibendum erat sit amet volutpat. In in interdum augue. Vivamus vel augue posuere neque viverra
+              fermentum a vel elit. Aliquam sed justo et augue hendrerit pellentesque vitae nec est. Nam laoreet finibus
+              risus, sit amet congue dui.
+            </p>
+            <p>
+              Nullam ut elit mollis, tristique ipsum ut, fringilla velit. Vivamus cursus et turpis nec imperdiet. Sed
+              dignissim lectus eu suscipit aliquam. Suspendisse ullamcorper aliquam velit, non faucibus enim fringilla in.
+              Suspendisse semper urna nec turpis cursus blandit. Fusce iaculis gravida magna, non aliquet turpis luctus
+              vel. In pulvinar ex ac dui consectetur, a placerat felis dignissim. Suspendisse metus magna, pellentesque
+              placerat magna vitae, interdum hendrerit felis. Aenean dapibus enim turpis, in iaculis urna pretium sed.
+              Praesent venenatis vitae justo eu blandit. Phasellus congue blandit augue, a suscipit lorem blandit ut. Nam
+              bibendum lobortis dolor maximus condimentum.
+            </p>
+            <p>
+              Mauris iaculis iaculis tortor ut porttitor. Sed dui lectus, varius ut elementum id, placerat eu velit.
+              Maecenas malesuada ornare vehicula. Phasellus mollis justo eget aliquet finibus. Ut libero metus, pretium
+              mollis gravida eu, ultricies cursus risus. Vestibulum eget malesuada dui, ut condimentum odio. Vestibulum a
+              tempor ligula. Nam molestie augue eu tempor tincidunt. Donec viverra, risus ac laoreet egestas, lorem nisl
+              tempus velit, et convallis lectus augue quis lacus. Nulla in consequat ante, quis placerat tellus. Phasellus
+              pulvinar eros malesuada, lacinia diam ac, sodales arcu. Sed vitae dapibus risus. Sed placerat lobortis nunc
+              sit amet ultricies. Donec fermentum, est nec sagittis pharetra, elit risus ullamcorper justo, ornare
+              condimentum libero quam sit amet tortor. Duis sit amet ante vel urna sodales vulputate. Vivamus commodo nibh
+              non lorem ullamcorper pulvinar.
+            </p>
+            <p>
+              Maecenas aliquam cursus tellus. Phasellus et dolor vitae turpis finibus consectetur. Sed vitae enim vel nisi
+              rhoncus consectetur ac quis urna. Aenean vestibulum mauris ut dignissim placerat. In ut sollicitudin lacus.
+              Aenean condimentum erat ac tempor vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+              lorem ligula, eleifend vel diam in, dictum ultricies lorem. Donec sodales nulla massa, vitae pretium tortor
+              viverra id. Nam scelerisque augue tincidunt metus ornare commodo. Donec ac felis nec nibh condimentum
+              ullamcorper eget sed arcu. Ut accumsan odio quam, eu hendrerit odio pretium eget. Ut nisi ante, luctus eget
+              magna non, fermentum ultricies augue. Etiam condimentum lacinia tellus quis varius. Aliquam eu risus diam.
+              Praesent bibendum diam ex, sed condimentum ligula ultricies vel.
+            </p>
+            <p>
+              Curabitur dignissim arcu vehicula tellus pharetra, vel lacinia est semper. Morbi accumsan ex non dui dapibus
+              pellentesque. Vestibulum semper tempor ex ullamcorper euismod. Donec bibendum arcu at magna porttitor, in
+              vulputate dui sagittis. Suspendisse sit amet mi vitae mi euismod lobortis sit amet quis quam. Cras eu
+              rhoncus dui. Nam sed eros ac sapien placerat imperdiet.
+            </p>
+          </vl-typography>
         </div>
       </section>
-      <section is="vl-region" alt>
-        <div is="vl-layout">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur culpa, cumque
-          deleniti dolorum ducimus eligendi eos ex laboriosam modi, nobis pariatur quaerat quam quos
-          repudiandae rerum totam veniam veritatis!
-        </div>
-      </section>
-    </div>
-    <div slot="footer"><p>footer content</p></div>
-  </vl-template>
-</div>
+    </vl-template>
+  </div>
 </body>
+
 </html>
