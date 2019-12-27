@@ -1,9 +1,6 @@
 import { VlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
-// import {VlHeader} from '/node_modules/vl-ui-header/vl-header.js';
-// import {VlFooter} from '/node_modules/vl-ui-footer/vl-footer.js';
-// todo add to package.json:
-//     "vl-ui-header": "1.0.0",
-//     "vl-ui-footer": "1.0.0"
+import { VlHeader } from '/node_modules/vl-ui-header/vl-header.js';
+import { VlFooter } from '/node_modules/vl-ui-footer/vl-footer.js';
 
 /**
  * VlTemplate
@@ -26,13 +23,13 @@ export class VlTemplate extends VlElement(HTMLElement) {
         <style>
             @import '../style.css';
         </style>
-        <vl-header>header</vl-header>
+        <vl-header></vl-header>
         <div class="vl-page">
           <main class="vl-main-content">
             <slot></slot>
           </main>
         </div>
-        <vl-footer>footer</vl-footer>
+        <vl-footer></vl-footer>
     `);
   }
 }

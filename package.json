@@ -28,11 +28,13 @@
     "release:prepare:css": "replace '\\.\\./style.css' '/node_modules/vl-ui-template/style.css' vl-template.js",
     "release:prepare:commit": "git add -f vl-template.js && git commit --amend --no-edit && git pull",
     "release:testless": "np --yolo",
-    "demo": "http-server"
+    "demo": "http-server -p 9000"
   },
   "dependencies": {
-    "vl-ui-core": "^2.1.0",
     "vl-ui-content-header": "^1.0.0",
+    "vl-ui-core": "^2.3.0",
+    "vl-ui-footer": "github:milieuinfo/webcomponent-vl-ui-footer",
+    "vl-ui-header": "github:milieuinfo/webcomponent-vl-ui-header",
     "vl-ui-image": "^1.0.0",
     "vl-ui-titles": "^1.0.13",
     "vl-ui-typography": "^1.0.1"
@@ -42,7 +44,9 @@
     "vl-ui-content-header": "^1.0.0",
     "vl-ui-image": "^1.0.0",
     "vl-ui-titles": "^1.0.13",
-    "vl-ui-typography": "^1.0.1"
+    "vl-ui-typography": "^1.0.1",
+    "vl-ui-header": "milieuinfo/webcomponent-vl-ui-header",
+    "vl-ui-footer": "milieuinfo/webcomponent-vl-ui-footer"
   },
   "devDependencies": {
     "http-server": "0.11.1",

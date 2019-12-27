@@ -1,10 +1,6 @@
 @import "../node_modules/prismjs/themes/prism.css";
 @import "../node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css";
-body {
-  padding: 2.5em !important;
-  max-width: 1280px !important;
-  margin: auto !important;
-}
+
 body > div:not(:first-child):not([class]) {
   margin-top: 5rem;
 }
