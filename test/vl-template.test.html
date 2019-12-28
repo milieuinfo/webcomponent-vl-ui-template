@@ -12,7 +12,7 @@
 <body>
   <test-fixture id="vl-template-fixture">
     <template>
-      <vl-template>
+      <vl-template data-vl-header-identifier="59188ff6-662b-45b9-b23a-964ad48c2bfb" data-vl-footer-identifier="0337f8dc-3266-4e7a-8f4a-95fd65189e5b">
         <span>main-content</span>
       </vl-template>
     </template>
@@ -24,12 +24,16 @@
 
       test('bevat een vl-header', () => {
         const element = fixture('vl-template-fixture');
-        should.exist(element.shadowRoot.querySelector('vl-header'));
+        const header = element.shadowRoot.querySelector('vl-header');
+        should.exist(header);
+        assert.equal(header.getAttribute('data-vl-identifier'), "59188ff6-662b-45b9-b23a-964ad48c2bfb");
       });
 
       test('bevat een vl-footer', () => {
         const element = fixture('vl-template-fixture');
-        should.exist(element.shadowRoot.querySelector('vl-footer'));
+        const footer = element.shadowRoot.querySelector('vl-footer');
+        should.exist(footer);
+        assert.equal(footer.getAttribute('data-vl-identifier'), "0337f8dc-3266-4e7a-8f4a-95fd65189e5b");
       });
 
       test('heeft de correcte slot content', () => {

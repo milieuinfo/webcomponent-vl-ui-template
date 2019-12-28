@@ -19,17 +19,18 @@ import { VlFooter } from '/node_modules/vl-ui-footer/vl-footer.js';
  */
 export class VlTemplate extends VlElement(HTMLElement) {
   constructor() {
-    super(`
+    super();
+    this._shadow(`
         <style>
             @import '../style.css';
         </style>
-        <vl-header></vl-header>
+        <vl-header data-vl-identifier="${this.dataset.vlHeaderIdentifier}"></vl-header>
         <div class="vl-page">
           <main class="vl-main-content">
             <slot></slot>
           </main>
         </div>
-        <vl-footer></vl-footer>
+        <vl-footer data-vl-identifier="${this.dataset.vlFooterIdentifier}"></vl-footer>
     `);
   }
 }
