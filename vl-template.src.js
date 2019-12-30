@@ -1,6 +1,4 @@
 import { VlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
-import { VlHeader } from '/node_modules/vl-ui-header/vl-header.js';
-import { VlFooter } from '/node_modules/vl-ui-footer/vl-footer.js';
 
 /**
  * VlTemplate
@@ -19,18 +17,17 @@ import { VlFooter } from '/node_modules/vl-ui-footer/vl-footer.js';
  */
 export class VlTemplate extends VlElement(HTMLElement) {
   constructor() {
-    super();
-    this._shadow(`
+    super(`
         <style>
             @import '../style.css';
         </style>
-        <vl-header data-vl-identifier="${this.dataset.vlHeaderIdentifier}"></vl-header>
+        <slot name="header"></slot>
         <div class="vl-page">
           <main class="vl-main-content">
-            <slot></slot>
+            <slot name="main"></slot>
           </main>
         </div>
-        <vl-footer data-vl-identifier="${this.dataset.vlFooterIdentifier}"></vl-footer>
+        <slot name="footer"></slot>
     `);
   }
 }
