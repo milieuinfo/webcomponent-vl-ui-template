@@ -1,9 +1,4 @@
-import {VlElement, define} from '/node_modules/vl-ui-core/vl-core.js';
-// import {VlHeader} from '/node_modules/vl-ui-header/vl-header.js';
-// import {VlFooter} from '/node_modules/vl-ui-footer/vl-footer.js';
-// todo add to package.json:
-//     "vl-ui-header": "1.0.0",
-//     "vl-ui-footer": "1.0.0"
+import { VlElement, define } from '/node_modules/vl-ui-core/vl-core.js';
 
 /**
  * VlTemplate
@@ -23,21 +18,17 @@ import {VlElement, define} from '/node_modules/vl-ui-core/vl-core.js';
 export class VlTemplate extends VlElement(HTMLElement) {
   constructor() {
     super(`
-            <style>
-                @import '../style.css';
-            </style>
-            <vl-header>
-              <slot name="header"></slot>
-            </vl-header>
-            <div class="vl-page">
-              <main class="vl-main-content">
-                <slot name="main"></slot>
-              </main>
-            </div>
-            <vl-footer>
-              <slot name="footer"></slot>
-            </vl-footer>
-        `);
+        <style>
+            @import '../style.css';
+        </style>
+        <slot name="header"></slot>
+        <div class="vl-page">
+          <main class="vl-main-content">
+            <slot name="main"></slot>
+          </main>
+        </div>
+        <slot name="footer"></slot>
+    `);
   }
 }
 
