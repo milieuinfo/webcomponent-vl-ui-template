@@ -31,10 +31,10 @@
     "demo": "http-server -p 9000"
   },
   "dependencies": {
-    "vl-ui-core": "^2.3.0"
+    "vl-ui-core": "^2.2.9"
   },
   "peerDependencies": {
-    "vl-ui-core": "^2.3.0"
+    "vl-ui-core": "^2.2.9"
   },
   "devDependencies": {
     "http-server": "0.11.1",
