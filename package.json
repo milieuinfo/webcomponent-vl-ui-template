@@ -48,7 +48,7 @@
     "vl-ui-image": "^1.0.0",
     "vl-ui-titles": "^1.0.13",
     "vl-ui-typography": "^1.0.1",
-    "vl-ui-util": "^2.0.13",
+    "vl-ui-util": "^3.0.0",
     "wct-browser-legacy": "1.0.2",
     "web-component-tester": "6.9.2"
   }
