@@ -33,10 +33,8 @@
     "test:e2e:safari": "mocha --safari",
     "test:server:start": "http-server &",
     "release": "np",
-    "release:prepare": "npm run release:prepare:build && npm run release:prepare:imports && npm run release:prepare:css && npm run release:prepare:commit",
+    "release:prepare": "npm run release:prepare:build && npm run release:prepare:css && npm run release:prepare:commit",
     "release:prepare:build": "minify *.src.js > vl-template.js",
-    "release:prepare:imports": "npm run release:prepare:imports:core",
-    "release:prepare:imports:core": "replace '/node_modules/vl-ui-core/vl-core.src.js' '/node_modules/vl-ui-core/vl-core.js' vl-template.js",
     "release:prepare:css": "replace '\\.\\./style.css' '/node_modules/vl-ui-template/style.css' vl-template.js",
     "release:prepare:commit": "git add -f vl-template.js && git commit --amend --no-edit && git pull",
     "release:testless": "np --yolo",
@@ -56,6 +54,6 @@
     "vl-ui-image": "^1.0.0",
     "vl-ui-titles": "^1.0.13",
     "vl-ui-typography": "^1.0.4",
-    "vl-ui-util": "^3.2.5"
+    "vl-ui-util": "^3.3.0"
   }
 }
