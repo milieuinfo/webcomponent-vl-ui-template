@@ -38,7 +38,7 @@
     "release:prepare:css": "replace '\\.\\./style.css' '/node_modules/vl-ui-template/style.css' vl-template.js",
     "release:prepare:commit": "git add -f vl-template.js && git commit --amend --no-edit && git pull",
     "release:testless": "np --yolo",
-    "demo": "http-server -p 9000"
+    "demo": "http-server"
   },
   "dependencies": {
     "vl-ui-core": "^3.0.1"
