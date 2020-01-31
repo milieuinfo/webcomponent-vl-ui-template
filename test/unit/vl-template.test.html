@@ -13,9 +13,9 @@
   <test-fixture id="vl-template-fixture">
     <template>
       <vl-template>
-        <div slot="header">header</div>
+        <vl-header slot="header" data-vl-identifier="59188ff6-662b-45b9-b23a-964ad48c2bfb"></vl-header>
         <span slot="main">main-content</span>
-        <div slot="footer">footer</div>
+        <vl-footer slot="footer" data-vl-identifier="0337f8dc-3266-4e7a-8f4a-95fd65189e5b"></vl-footer>
       </vl-template>
     </template>
   </test-fixture>
@@ -27,13 +27,13 @@
       test('bevat een vl-header', () => {
         const element = fixture('vl-template-fixture');
         const header = element.shadowRoot.querySelector('slot[name="header"]').assignedElements()[0];
-        assert.isTrue(header.innerText === 'header');
+        assert.equal(header, element.querySelector('vl-header'));
       });
 
       test('bevat een vl-footer', () => {
         const element = fixture('vl-template-fixture');
         const footer = element.shadowRoot.querySelector('slot[name="footer"]').assignedElements()[0];
-        assert.isTrue(footer.innerText === 'footer');
+        assert.equal(footer, element.querySelector('vl-footer'));
       });
 
       test('heeft de correcte slot content', () => {
