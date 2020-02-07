@@ -1,4 +1,4 @@
-const { VlElement } = require('vl-ui-core');
+const { VlElement } = require('vl-ui-core').Test;
 const { VlHeader } = require('vl-ui-header');
 const { VlFooter } = require('vl-ui-footer');
 const { By } = require('selenium-webdriver');
