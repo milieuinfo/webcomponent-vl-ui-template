@@ -1,3 +1,3 @@
 module.exports = { 
-    VlTemplate: require('../vl-template.src.js').VlTemplate
+    VlTemplate: require('../dist/vl-template.src.js').VlTemplate
 }

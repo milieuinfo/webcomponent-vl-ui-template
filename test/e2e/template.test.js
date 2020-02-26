@@ -9,10 +9,6 @@ describe('vl-template', async () => {
         return vlTemplatePage.load();
     });
 
-    after(async () => { 
-        return driver.quit();
-    });
-
     it('de header word weergegeven', async () => {
         const template = await vlTemplatePage.getTemplate();
         await assert.eventually.isNotNull(template.getHeader());
