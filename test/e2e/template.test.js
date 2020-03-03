@@ -10,12 +10,18 @@ describe('vl-template', async () => {
 
     it('Als gebruiker kan ik de header zien', async () => {
         const template = await vlTemplatePage.getTemplate();
-        await assert.eventually.isNotNull(template.getHeader());
+        const headerSlotElements = await template.getHeaderSlotElements();
+        assert.lengthOf(headerSlotElements, 1);
+        assert.isNotNull(headerSlotElements);
+        await assert.eventually.equal(headerSlotElements[0].getTagName(), 'vl-header');
     });
 
     it('Als gebruiker kan ik de footer zien', async () => {
         const template = await vlTemplatePage.getTemplate();
-        await assert.eventually.isNotNull(template.getFooter());
+        const footerSlotElements = await template.getFooterSlotElements();
+        assert.lengthOf(footerSlotElements, 1);
+        assert.isNotNull(footerSlotElements);
+        await assert.eventually.equal(footerSlotElements[0].getTagName(), 'vl-footer');
     });
 
     it('Als gebruiker kan ik de content zien', async () => {
