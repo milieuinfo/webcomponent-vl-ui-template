@@ -1,23 +1,21 @@
 const { VlElement } = require('vl-ui-core').Test;
-const { VlHeader } = require('vl-ui-header').Test;
-const { VlFooter } = require('vl-ui-footer').Test;
-const { By } = require('selenium-webdriver');
+const { By } = require('vl-ui-core').Test.Setup;
 
-class VlTemplate extends VlElement {  
-    async getHeader() {
-        const header = await this.findElement(By.css('#header'));
-        return new VlHeader(this.driver, header);
+class VlTemplate extends VlElement {
+    async getHeaderSlotElements() {
+        const slot = await this.shadowRoot.findElement(By.css('slot[name="header"]'));
+        return this.getAssignedElements(slot);
     }
 
-    async getContent() {
-        return this.findElement(By.css('#content'));
+    async getContentSlotElements() {
+        const slot = await this.shadowRoot.findElement(By.css('slot[name="main"]'));
+        return this.getAssignedElements(slot);
     }
 
-    async getFooter() {
-        const footer = await this.findElement(By.css('#footer'));
-        return new VlFooter(this.driver, footer);
+    async getFooterSlotElements() {
+        const slot = await this.shadowRoot.findElement(By.css('slot[name="footer"]'));
+        return this.getAssignedElements(slot);
     }
-
 }
 
 module.exports = VlTemplate;
