@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <script src="../../../@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
   <script src="../../../web-component-tester/browser.js"></script>
-  
+
   <script type="module" src="../../src/vl-template.js"></script>
 </head>
 
@@ -40,6 +40,16 @@
         const element = fixture('vl-template-fixture');
         const content = element.shadowRoot.querySelector('div.vl-page > main.vl-main-content > slot[name="main"]').assignedElements()[0];
         assert.isTrue(content.innerText === 'main-content');
+      });
+
+      test('bevat een container met de juiste class om de footer naar beneden te duwen wanneer er weinig content is', () => {
+        const element = fixture('vl-template-fixture');
+        const container = element.shadowRoot.querySelector('div');
+        const children = container.querySelectorAll('div');
+        assert.lengthOf(children, 1);
+        const page = children[0];
+        assert.isTrue(container.classList.contains('vl-u-sticky-gf'));
+        assert.isTrue(page.classList.contains('vl-page'));
       });
     });
 
