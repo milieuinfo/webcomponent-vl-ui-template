@@ -22,8 +22,6 @@
 
   <script>
     suite('vl-template', () => {
-      const should = chai.should();
-
       test('bevat een vl-header', () => {
         const element = fixture('vl-template-fixture');
         const header = element.shadowRoot.querySelector('slot[name="header"]').assignedElements()[0];
@@ -52,7 +50,6 @@
         assert.isTrue(page.classList.contains('vl-page'));
       });
     });
-
   </script>
 </body>
 
