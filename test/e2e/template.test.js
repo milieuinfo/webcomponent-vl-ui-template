@@ -30,6 +30,6 @@ describe('vl-template', async () => {
     assert.lengthOf(contentSlotElements, 1);
     assert.isNotNull(contentSlotElements);
     const h2 = await contentSlotElements[0].findElement(By.css('h2'));
-    await assert.eventually.equal(h2.getText(), 'Code voorbeeld');
+    await assert.eventually.equal(h2.getText(), 'In eu tortor');
   });
 });
