@@ -20,7 +20,7 @@ export class VlTemplate extends vlElement(HTMLElement) {
   constructor() {
     super(`
         <style>
-            @import /node_modules/vl-ui-template/dist/style.css;
+            @import '/node_modules/vl-ui-template/dist/style.css';
         </style>
         <div class="vl-u-sticky-gf">
           <slot name="header"></slot>
