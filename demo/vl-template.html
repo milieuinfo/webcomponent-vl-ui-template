@@ -21,18 +21,17 @@
 
 <body>
     <vl-demo-page data-vl-webcomponent="vl-template">
-        <vl-demo data-vl-title="">
+        <vl-demo data-vl-title="Template">
             <vl-template>
                 <vl-header id="header" slot="header" data-vl-identifier="59188ff6-662b-45b9-b23a-964ad48c2bfb" data-vl-development></vl-header>
                 <div id="content" slot="main">
                     <vl-content-header>
-                        <img is="vl-image" slot="image" src="img/default.jpg"
-                            srcset="img/mobile.jpg 320w, img/default.jpg 1024w, img/wide.jpg 1600w">
+                        <img is="vl-image" slot="image" src="img/default.jpg" srcset="img/mobile.jpg 320w, img/default.jpg 1024w, img/wide.jpg 1600w">
                         <a slot="context-link" href="https://www.vlaanderen.be">Context</a>
                         <a slot="title-link" href="https://www.vlaanderen.be">Vlaanderen</a>
                     </vl-content-header>
 
-                    <section is="vl-region" no-space-bottom>
+                    <section is="vl-region" data-vl-no-space-bottom>
                         <div is="vl-layout">
                             <h1 is="vl-h1">Demo pagina</h1>
                         </div>
@@ -162,7 +161,6 @@
                         </div>
                     </section>
                 </div>
-                <vl-footer id="footer" slot="footer" data-vl-identifier="0337f8dc-3266-4e7a-8f4a-95fd65189e5b" data-vl-development></vl-footer>
             </vl-template>
         </vl-demo>
     </vl-demo-page>
