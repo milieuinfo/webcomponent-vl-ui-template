@@ -44,15 +44,15 @@
   },
   "devDependencies": {
     "@govflanders/vl-ui-core": "^4.0.5",
+    "vl-ui-body": "^1.0.3",
     "vl-ui-code-preview": "^1.0.0",
     "vl-ui-content-header": "^3.0.5",
     "vl-ui-footer": "^3.2.0",
     "vl-ui-grid": "^3.1.4",
     "vl-ui-header": "^3.2.0",
     "vl-ui-image": "^3.0.5",
-    "vl-ui-titles": "^3.0.5",
-    "vl-ui-typography": "^3.0.4",
-    "vl-ui-body": "^1.0.3",
+    "vl-ui-titles": "^3.0.6",
+    "vl-ui-typography": "^3.1.1",
     "vl-ui-util": "^5.2.13"
   }
 }
