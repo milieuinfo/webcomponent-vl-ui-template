@@ -9,8 +9,7 @@ class VlTemplatePage extends Page {
   }
 
   async load() {
-    await this.driver.get(`${Config.baseUrl}/demo/vl-template.html`);
-    await this.driver.manage().window().maximize();
+    await super.load(Config.baseUrl + '/demo/vl-template.html');
   }
 }
 
