@@ -21,11 +21,25 @@
     > div {
         position: absolute;
         height: 100%;
-        width: 100%
+        width: 100%;
+        
+        .vl-page {
+            top: 50%;
+            transform: translate(0, -50%);
+        }
     }
+}
 
+:host([data-vl-v-stretch]) {
     .vl-page {
-        top: 50%;
-        transform: translate(0, -50%);
+        height: 100%;
+    
+        .vl-main-content {
+            height: 100%;
+
+            ::slotted(*) {
+                height: 100%;
+            }
+        }
     }
 }
