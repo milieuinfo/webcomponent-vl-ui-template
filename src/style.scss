@@ -31,14 +31,20 @@
 }
 
 :host([data-vl-v-stretch]) {
-    .vl-page {
+    > div {
+        position: absolute;
         height: 100%;
-    
-        .vl-main-content {
-            height: 100%;
+        width: 100%;
 
-            ::slotted(*) {
+        .vl-page {
+            height: 100%;
+        
+            .vl-main-content {
                 height: 100%;
+
+                ::slotted(*) {
+                    height: 100%;
+                }
             }
         }
     }
