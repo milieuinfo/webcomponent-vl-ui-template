@@ -9,6 +9,10 @@ describe('vl-template', async () => {
     return vlTemplatePage.load();
   });
 
+  it('WCAG', async () => {
+    await assert.eventually.isFalse(vlTemplatePage.hasWcagIssues());
+  });
+
   it('als gebruiker kan ik de content zien', async () => {
     const template = await vlTemplatePage.getTemplate();
     const contentSlotElements = await template.getContentSlotElements();
