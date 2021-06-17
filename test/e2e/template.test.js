@@ -17,4 +17,20 @@ describe('vl-template', async () => {
     const h2 = await contentSlotElements[0].findElement(By.css('h2'));
     await assert.eventually.equal(h2.getText(), 'Demo\'s');
   });
+
+  it('als gebruiker kan ik de header zien', async () => {
+    const template = await vlTemplatePage.getTemplate();
+    const headerSlotElements = await template.getHeaderSlotElements();
+    assert.lengthOf(headerSlotElements, 1);
+    assert.isNotNull(headerSlotElements);
+    await assert.eventually.equal(headerSlotElements[0].getTagName(), 'vl-header');
+  });
+  
+  it('als gebruiker kan ik de footer zien', async () => {
+    const template = await vlTemplatePage.getTemplate();
+    const footerSlotElements = await template.getFooterSlotElements();
+    assert.lengthOf(footerSlotElements, 1);
+    assert.isNotNull(footerSlotElements);
+    await assert.eventually.equal(footerSlotElements[0].getTagName(), 'vl-footer');
+  });
 });
